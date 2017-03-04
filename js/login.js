@@ -7,7 +7,7 @@ $(document).ready(function(){
 			data: {
 				'id': '10142510110',
 				'pwd': 'KQ$(f62k'
-			}
+			},
 			success: function(data){
 				alert(data.ret);
 				alert(data.message);
