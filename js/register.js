@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#register-btn").click(function(){
+	$("#register").click(function(){
 		$.ajax({
 			type:'post',
       contentType: "application/json; charset=utf-8",
