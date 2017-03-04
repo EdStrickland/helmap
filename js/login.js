@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#login-btn").click(function(){
+	$("#login").click(function(){
 		$.ajax({
 			type:'post',
       contentType: "application/json; charset=utf-8",
