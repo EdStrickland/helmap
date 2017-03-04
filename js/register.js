@@ -3,7 +3,7 @@ $(document).ready(function(){
 		$.ajax({
 			type:'post',
       contentType: "application/json; charset=utf-8",
-      upgradeInsecureRequests: 1,
+      // upgradeInsecureRequests: 1,
 			url: 'https://115.28.101.55:3000/user/signup',
 			data: {
 				'id': $("#username input").val().toString(),
