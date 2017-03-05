@@ -16,6 +16,7 @@ angular
   ])
   .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
     
+    console.log($httpProvider.defaults.headers.common);
     $httpProvider.defaults.withCredentials = false;
     // $httpProvider.interceptors.push('httpInterceptor');
     $urlRouterProvider.otherwise('/login');

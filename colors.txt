@@ -1,8 +1,0 @@
-blue #388EE9;
-dark blue #3292e4;
-light blue #6ebdf3;
-purple #8eb6ff;
-blue shadow #a8a9ad
-text shadow #3a3f50
-
-#6ebdf3
