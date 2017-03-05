@@ -64,5 +64,5 @@ angular
     
   }])
   .factory('apiRoot', function(){
-      return 'http://115.28.101.55:3000/';
+      return '//115.28.101.55:3000/';
     });
