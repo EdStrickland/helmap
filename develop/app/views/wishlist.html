@@ -1,0 +1,21 @@
+<div class="container" ng-controller="WishlistCtrl as wControl">
+  <div class="switch switch-lg">
+    <ul id="wish-switch" value="0">
+      <li id="myWishes" class="switch-selected"><a ng-click="wControl.init(0,0)">我的愿望</a></li>
+      <li id="ToAchieve"><a ng-click="wControl.init(1,0)">我来实现</a></li>
+    </ul>
+  </div>
+  <div class="wishes">
+    <div wid={{wish.wid}} class="wish" ng-repeat="wish in wControl.wishes">
+      <div class="get-btn">接下心愿</div>
+      <img class="user-avatar" src={{wControl.avatar}} alt="">
+      <div class="wish-content-box">
+        <a class="wish-from">{{wish.loc}}</a>
+        <p class="wish-content">{{wish.descp}}</p>
+        <p class="wish-time">{{wish.time}}</p>
+      </div>
+    </div>
+  </div>
+  <div id="load" class="loading" ng-click="wControl.init()">点击加载</div>
+  <div id="load-complete" class="loading">加载完毕</div>
+</div>

@@ -1,0 +1,38 @@
+<div id="personal-info-container" class="container" ng-controller="UserCtrl as user">
+  <div class="info-box">
+    <div class="info-img-box">
+      <img class="personal-avatar" src={{user.avatar}} alt="">
+      <p class="personal-name">{{user.name}}</p>
+    </div>
+    <div class="info-list-box">
+      <ul class="info-title">
+        <li class="personal-no-title">
+          <p>学号</p>
+        </li>
+        <li class="personal-gender-title">
+          <p>性别</p>
+        </li>
+        <li class="personal-mobile-title">
+          <p>手机</p>
+        </li>
+        <li class="personal-mail-title">
+          <p>邮箱</p>
+        </li>
+      </ul>
+      <ul class="info-list">
+        <li class="personal-no">
+          <p>{{user.sid}}</p>
+        </li>
+        <li class="personal-gender">
+          <p>{{user.sex}}</p>
+        </li>
+        <li class="personal-mobile">
+          <p>{{user.mobile}}</p>
+        </li>
+        <li class="personal-mail">
+          <p>{{user.email}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

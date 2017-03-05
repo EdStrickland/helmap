@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="comment-box" ng-controller="CommentCtrl as cControl">
+    <div class="comment-title" ng-click="cControl.comment(tucao)">吐 槽</div>
+    <div class="comment-container">
+      <div class="comment-input">
+        <input type="text" placeholder="写下你的吐槽吧" ng-model="tucao">
+      </div>
+      <div class="comments">
+        <div class="comment" ng-repeat="comment in cControl.comments">
+          <img class="user-avatar" src={{comment.avatar}} alt="">
+          <div class="comment-content-box">
+            <p class="comment-comtent">{{comment.descp}}</p>
+            <!-- <a class="like">{{comment.like}} <i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wishes" ng-controller="WishCtrl as wControl">
+    <div class="wish">
+      <div class="get-btn" style="display: block" ng-click="wControl.create(input)">发布心愿</div>
+      <div class="wish-input-box" ng-model="input">
+        <div class="wish-from-input">
+          <select ng-model="input.loc"> 
+            <option value="1">中北校区</option> 
+            <option value="0">闵行校区</option> 
+          </select> 
+        </div>
+        <div class="wish-content-input"><textarea placeholder="许下你的愿望" cols="30" rows="10" ng-model="input.descp"></textarea></div>
+      </div>
+    </div>
+    <div class="wish-loc-switch">
+      <select ng-change="wControl.change(x)" ng-model="x"> 
+        <option value="2">全都</option>
+        <option value="1">中北校区</option>
+        <option value="0">闵行校区</option>
+      </select> 
+    </div>
+    <div wid={{wish.wid}} class="wish" ng-repeat="wish in wControl.wishes">
+      <div class="get-btn">接下心愿</div>
+      <img class="user-avatar" src={{wControl.avatar}} alt="">
+      <div class="wish-content-box">
+        <a class="wish-from">{{wish.loc}}</a>
+        <p class="wish-content">{{wish.descp}}</p>
+        <p class="wish-time">{{wish.time}}</p>
+      </div>
+    </div>
+    <div id="load" class="loading" ng-click="wControl.change()">点击加载</div>
+    <div id="load-complete" class="loading">加载完毕</div>
+  </div>
+</div>

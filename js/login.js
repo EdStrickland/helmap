@@ -2,7 +2,11 @@ $(document).ready(function(){
 	$("#login").click(function(){
 		$.ajax({
 			type:'post',
-      contentType: "application/json; charset=utf-8",
+			xhrFields: {  
+		    withCredentials: false
+		  },  
+		  crossDomain: true,  
+      // contentType: "application/json; charset=utf-8",
 			url: 'http://115.28.101.55:3000/user/login',
 			data: {
 				'id': '10142510110',
