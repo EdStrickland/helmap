@@ -1,0 +1,15 @@
+.chatbox {
+	width: 100px;
+	height: 100px;
+}
+.chatbox-left {}
+.chatbox-left-top {}
+.chatbox-left-contact {}
+.chatbox-right {}
+.chatbox-right-top {}
+.chatbox-right-title {}
+.chatbox-right-close {}
+.chatbox-right-content {}
+.chatbox-right-inputbox {}
+.chatbox-right-input {}
+.chatbox-right-send {}

@@ -16,10 +16,11 @@ angular
   ])
   .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
     
-    console.log($httpProvider.defaults.headers.common);
+    // $httpProvider.defaults.headers.common = {'Content-Type' : "application/json"};
+    // console.log($httpProvider.defaults.headers.common);
     $httpProvider.defaults.withCredentials = false;
     // $httpProvider.interceptors.push('httpInterceptor');
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/login');
 
     $stateProvider
     .state('login', {
@@ -30,7 +31,9 @@ angular
     })
     .state('register', {
       url: '/register',
-      templateUrl: 'views/register.html'
+      templateUrl: 'views/register.html',
+      controller : "RegisterCtrl",
+      controllerAs: "vm"
     })
     .state('home', {
       url: '/',
@@ -53,16 +56,22 @@ angular
     .state('home.chat', {
       url: '/chat',
       templateUrl: 'views/chat.html'
+    }).state('home.chatbox', {
+      url: '/',
+      templateUrl: 'views/chatbox.html'
     })
     .state('home.notification', {
       url: 'notification',
       templateUrl: 'views/notification.html'
     }).state('home.help', {
-      url: '/help',
+      url: '/help/',
       templateUrl: 'views/help.html'
-    })
+    }).state('home.ask', {
+      url: '/ask',
+      templateUrl: 'views/ask.html'
+    });
     
   }])
   .factory('apiRoot', function(){
-      return '115.28.101.55:3000/';
+      return 'http://115.28.101.55:3000/';
     });
