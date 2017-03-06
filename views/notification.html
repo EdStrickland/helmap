@@ -1,0 +1,9 @@
+<div class="container" ng-controller="NotificationCtrl as nControl">
+  <div class="notes">
+    <div class="note" ng-repeat="note in nControl.notes">
+      <p class="note-title"></p>
+    </div>
+  </div>
+  <div id="load" class="loading" ng-click="wControl.init()">点击加载</div>
+  <div id="load-complete" class="loading">加载完毕</div>
+</div>

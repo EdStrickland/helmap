@@ -1,30 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Helmap.org</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<link rel="stylesheet" href="../css/login.css">
-	<script type="text/javascript" src="../js/jquery-3.0.0.min.js"></script>
-	<script type="text/javascript" src="../js/register.js"></script>
-</head>
-<body>
-	<h1 id="login-title">REGISTER</h1>
-	<div id="register-box" class="login-box">
-		<div id="username" class="login-box-input">
-			<img class="login-img" src="" alt="">
-			<input class="login-input" placeholder="USERNAME" type="text">
-		</div>
-		<div id="password" class="login-box-input">
-			<img class="login-img" src="" alt="">
-			<input class="login-input" placeholder="PASSWORD" type="text">
-		</div>
-		<div id="vip-pass" class="login-box-input">
-			<img class="login-img" src="" alt="">
-			<input class="login-input" placeholder="VIP CODE" type="text">
-		</div>
-	</div>
-	<a id="register" class="login-btn" >REGISTER</a>
-</body>
-</html>
+<div style="text-align: center">
+  <h1 id="register-title">REGISTER</h1>
+  <div id="register-box" class="register-box">
+    <div id="Rusername" class="register-box-input">
+      <div class="register-img"><i class="fa fa-user " aria-hidden="true"></i></div>
+      <input class="register-input" placeholder="USERNAME" type="text">
+    </div>
+    <div id="Rpassword" class="register-box-input">
+      <div class="register-img"><i class="fa fa-lock " aria-hidden="true"></i></div>
+      <input class="register-input" placeholder="PASSWORD" type="password">
+    </div>
+    <div id="vip-pass" class="register-box-input">
+      <img class="register-img" src="" alt="">
+      <input class="register-input" placeholder="VIP CODE" type="text">
+    </div>
+  </div>
+  <a id="register" class="register-btn" ng-click="vm.register()">REGISTER</a>
+</div>

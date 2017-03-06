@@ -1,8 +1,9 @@
 <div id="personal-info-container" class="container" ng-controller="UserCtrl as user">
   <div class="info-box">
-    <div class="info-img-box">
+    <div class="info-img-box" ng-click="user.save()">
       <img class="personal-avatar" src={{user.avatar}} alt="">
       <p class="personal-name">{{user.name}}</p>
+
     </div>
     <div class="info-list-box">
       <ul class="info-title">
@@ -23,14 +24,17 @@
         <li class="personal-no">
           <p>{{user.sid}}</p>
         </li>
-        <li class="personal-gender">
+        <li class="personal-gender" ng-click="user.edit($event)">
           <p>{{user.sex}}</p>
+          <input class="edit-box" type="text" value="{{user.sex}}">
         </li>
-        <li class="personal-mobile">
+        <li class="personal-mobile" ng-click="user.edit($event)">
           <p>{{user.mobile}}</p>
+          <input class="edit-box" type="text" value="{{user.mobile}}">
         </li>
-        <li class="personal-mail">
+        <li class="personal-mail" ng-click="user.edit($event)">
           <p>{{user.email}}</p>
+          <input class="edit-box" type="text" value="{{user.email}}">
         </li>
       </ul>
     </div>

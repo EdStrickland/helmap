@@ -31,12 +31,19 @@
   border-radius: 16.5px 0 0 16.5px;
   padding-left: 10px;
 }
+#myWishes:hover {
+  cursor: pointer;
+}
 
 #ToAchieve {
   margin-left: -1px;
   border: 1px solid #fff;
   border-radius: 0 16.5px 16.5px 0;
   padding-right: 10px;
+}
+
+#ToAchieve:hover {
+  cursor: pointer;
 }
 
 .switch-selected {
@@ -56,6 +63,25 @@
 #load-complete {
   display: none;
 }
+
+.wish-done {
+  position:absolute;
+  z-index:0;
+}
+
+.wish-done > img {
+  width: 70px;
+  height: 70px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.wish-from {
+  display: none;
+}
+.wish-name {padding-left: 10px;}
+.wish-mobile {padding-left: 10px;}
+.wish-email {padding-left: 10px;}
 
 @media screen and (min-width: 600px) {
   .title {

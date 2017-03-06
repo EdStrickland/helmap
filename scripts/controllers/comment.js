@@ -8,7 +8,7 @@
  * Controller of the helmapApp
  */
 angular.module('helmapApp')
-  .controller('CommentCtrl', ['commentService', 'userService', function(commentService, userService) {
+  .controller('CommentCtrl', ['commentService', 'userService', "$cookieStore", function(commentService, userService, $cookieStore) {
     var vm = this;
     vm.comment = comment;
     vm.init = init;
@@ -29,17 +29,17 @@ angular.module('helmapApp')
             userId: comments[i].userId,
             liked: comments[i].liked,
             __v: comments[i]._v,
-            avatar: "images/head.jpg"
+            avatar: $cookieStore.get("avatar")
           })
         }
-        vm.avatar = "images/head.jpg";
+        vm.avatar = $cookieStore.get("avatar");
       })
     }
 
     function comment(tucao) {
       var data = {
-        uid: "58b7d98b9c0c333a00f82939",
-        descp: tucao
+        uid: $cookieStore.get("userid"),
+        descp: tucao || "女生节快乐！"
       };
       console.log(data);
       commentService.createComment(data).then(function(successCallback) {

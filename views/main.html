@@ -31,14 +31,14 @@
     </div>
     <div class="wish-loc-switch">
       <select ng-change="wControl.change(x)" ng-model="x"> 
-        <option value="2">全都</option>
+        <option value="2">全部</option>
         <option value="1">中北校区</option>
         <option value="0">闵行校区</option>
       </select> 
     </div>
-    <div wid={{wish.wid}} class="wish" ng-repeat="wish in wControl.wishes">
-      <div class="get-btn">接下心愿</div>
-      <img class="user-avatar" src={{wControl.avatar}} alt="">
+    <div wid={{wish.wid}} class="wish" ng-repeat="wish in wControl.wishes" ng-click="wControl.show($event)">
+      <div class="get-btn" ng-click="wControl.accept($event)">接下心愿</div>
+      <img class="user-avatar" src={{wish.avatar}} alt="">
       <div class="wish-content-box">
         <a class="wish-from">{{wish.loc}}</a>
         <p class="wish-content">{{wish.descp}}</p>

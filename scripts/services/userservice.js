@@ -8,15 +8,10 @@
  * Service in the helmapApp.
  */
 angular.module('helmapApp')
-  .factory('userService', ['$http', 'apiRoot', function($http, apiRoot) {
+  .service('userService', ['$http', 'apiRoot', function($http, apiRoot) {
 
-    // $http.defaults.headers.post['Content-Type'] = "application/json";
 
-    var service = {
-    	geUser: getUser,
-    	login: login
-    }
-    function getUser(uid) {
+    this.getUser = function(uid) {
       var user = $http({
         method: 'get',
         url: apiRoot + 'user/info?uid=' + uid,
@@ -24,17 +19,33 @@ angular.module('helmapApp')
       return user;
     }
 
-    function login(param) {
+    this.login = function(param) {
       var promise = $http({
         method: 'POST',
 			  url: apiRoot + 'user/login',
-			  data: {
-              "id": "10142510110",
-              "pwd": "KQ$(f62k"
-          }
+        contentType: "application/json",
+			  data: param
       });
       return promise;
     };
 
-    return service;
+    this.register = function(param) {
+      var promise = $http({
+        method: 'POST',
+        url: apiRoot + 'user/signup',
+        contentType: "application/json",
+        data: param
+      });
+      return promise;
+    };
+
+    this.save = function(param) {
+      var promise = $http({
+        method: 'POST',
+        url: apiRoot + 'user/info',
+        contentType: "application/json",
+        data: param
+      });
+      return promise;
+    };
   }]);

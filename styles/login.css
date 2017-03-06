@@ -12,6 +12,9 @@
 	margin-bottom: 5vh;
 	text-align: center;
 	font-size: 45px;
+	color: #fff;
+	text-shadow: 1px 1px 5px #312f2f;
+	font-family: Arial;
 }
 
 .login-box {
@@ -63,11 +66,22 @@
 	background-color: #388EE9;
 	color: #fff;
 	border-radius: 5px;
+	font-family: Arial;
+}
+
+.login-btn:hover {
+	background-color: #2e68a7;
+	cursor: pointer;
 }
 
 #register-btn {
 	text-decoration: none;
 	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 5px #312f2f;
+}
+#register-btn:hover {
+	cursor: pointer;
 }
 
 @media screen and (max-width: 280px) {
