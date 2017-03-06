@@ -9,13 +9,14 @@
     <div ng-repeat="wish in wControl.wishes">
       <div wid="{{wish.wid}}" class="wish" ng-click="wControl.show($event,wishUser)">
         <div class="get-btn" ng-show="{{wish.isSelf}}" ng-click="wControl.finish($event)">完成心愿</div>
+        <div class="wish-done" ng-show="{{wish.isDone}}"><img src="../images/done.png" alt=""></div>
         <img wid={{wish.userId}} class="user-avatar" src={{wish.avatar}} ng-click>
         <div class="wish-content-box">
           <a class="wish-from">{{wish.loc}}</a>
           <p class="wish-content">{{wish.descp}}</p>
           <p class="wish-time">{{wish.time}}</p>
         </div>
-        <div class="wish-done" ng-show="{{wish.isDone}}"><img src="../images/done.png" alt=""></div>
+        
       </div>
       <div class="wish-from" ng-model='wishUser'>
         <div class="wish-from-box">

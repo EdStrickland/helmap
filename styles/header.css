@@ -9,10 +9,10 @@ body {
 	margin: 0;
 	height: 100%;
 	background: url(../images/background.jpg) top center;
-	background-size: cover;
-  /*background-repeat: repeat-x;*/
+	/*background-size: cover;*/
+  background-repeat: repeat-x;
   background-position: center 0;
-  background-color: #d4d5e0;
+  background-color: #000316;
 }
 
 ul {

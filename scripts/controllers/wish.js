@@ -34,7 +34,7 @@ angular.module('helmapApp')
           for (var i = 0; i < wishes.length; i++) {
 
             if (wishes[i].status != 2 && wishes[i].status != 1) {
-
+              
               var temp = wishes[i].userId;
               userService.getUser(temp).then(function(successCallback) {
                 var data = successCallback.data.user;

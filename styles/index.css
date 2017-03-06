@@ -23,6 +23,9 @@ COMMENTS
 .comments {
 	height: calc(100% - 40px);
 	height: -webkit-calc(100% - 40px);
+	max-height: 214px;
+	border-radius: 0 6px 6px 0;
+
 	overflow-y: scroll;
 }
 .comment-container {
@@ -91,6 +94,7 @@ COMMENTS
 	/*position: fixed;*/
 	background-color: #fff;
 	border-bottom: 1px solid #DFDFDF;
+	border-radius: 0 6px 0 0;
 }
 
 .comment-input > input {
